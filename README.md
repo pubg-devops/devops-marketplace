@@ -11,7 +11,7 @@ This marketplace provides a curated set of Claude Code extensions designed to en
 ### Adding the Marketplace
 
 ```bash
-/plugin marketplace add github:pubg-devops/devops-marketplace
+/plugin marketplace add pubg-devops/devops-marketplace
 ```
 
 ### Installing Plugins
@@ -24,7 +24,15 @@ Once the marketplace is added, browse and install plugins:
 
 # Install specific plugin
 /plugin install mcp-default@devops-marketplace
+/plugin install workflow-adapter@devops-marketplace
 ```
+
+## Available Plugins
+
+| Plugin               | Description                                                                                                                 |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **mcp-default**      | Default MCP servers for enhanced Claude Code capabilities including documentation search and sequential thinking            |
+| **workflow-adapter** | Multi-agent workflow automation system for Claude Code. Install agents, plan features, execute tasks, and validate progress |
 
 ## Team Configuration
 
@@ -49,9 +57,9 @@ For automatic marketplace setup across your team, add this to your repository's 
 ```
 devops-marketplace/
 ├── .claude-plugin/
-│   └── marketplace.json     # Marketplace catalog
+│   └── marketplace.json     # Marketplace catalog (includes GitHub-referenced plugins)
 ├── plugins/
-│   └── mcp-default/         # Individual plugins
+│   └── mcp-default/         # Local plugins
 │       ├── .claude-plugin/
 │       │   └── plugin.json
 │       └── .mcp.json
@@ -60,6 +68,8 @@ devops-marketplace/
 ├── README.md                # This file
 └── AGENT.md                 # Maintenance guide
 ```
+
+Note: Some plugins (e.g., workflow-adapter) are referenced via GitHub and not stored locally in the `plugins/` directory.
 
 ## Management Commands
 

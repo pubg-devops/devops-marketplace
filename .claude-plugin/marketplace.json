@@ -11,6 +11,14 @@
         {
             "name": "mcp-default",
             "source": "./plugins/mcp-default"
+        },
+        {
+            "name": "workflow-adapter",
+            "source": {
+                "source": "github",
+                "owner": "pubg-devops",
+                "repo": "workflow-adapter"
+            }
         }
     ]
 }
