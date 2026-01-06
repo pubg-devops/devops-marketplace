@@ -16,8 +16,7 @@
             "name": "workflow-adapter",
             "source": {
                 "source": "github",
-                "owner": "pubg-devops",
-                "repo": "workflow-adapter"
+                "repo": "pubg-devops/workflow-adapter"
             }
         }
     ]
