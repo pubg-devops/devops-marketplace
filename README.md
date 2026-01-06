@@ -10,14 +10,6 @@ This marketplace provides a curated set of Claude Code extensions designed to en
 
 ### Adding the Marketplace
 
-To add this marketplace to your Claude Code installation:
-
-```bash
-/plugin marketplace add https://github.com/pubg-devops/devops-marketplace.git
-```
-
-Or using the GitHub shorthand:
-
 ```bash
 /plugin marketplace add github:pubg-devops/devops-marketplace
 ```
@@ -44,14 +36,13 @@ For automatic marketplace setup across your team, add this to your repository's 
     "devops-marketplace": {
       "source": {
         "source": "github",
-        "repo": "pubg-devops/devops-marketplace"
+        "owner": "pubg-devops",
+        "repo": "devops-marketplace"
       }
     }
   }
 }
 ```
-
-Team members who trust the repository will automatically have access to all marketplace plugins.
 
 ## Marketplace Structure
 
@@ -64,6 +55,8 @@ devops-marketplace/
 │       ├── .claude-plugin/
 │       │   └── plugin.json
 │       └── .mcp.json
+├── .gitignore               # Git ignore rules
+├── LICENSE                  # MIT License
 ├── README.md                # This file
 └── AGENT.md                 # Maintenance guide
 ```
